@@ -14,7 +14,7 @@ import { detectEmergencyIntent } from "@/lib/api/emergencyGuard";
  */
 export const runtime = "nodejs";
 
-const MODEL = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
+const MODEL = process.env.GROQ_MODEL || "openai/gpt-oss-120b";
 const MAX_QUESTION = 500;
 const MODEL_TIMEOUT_MS = 6000; // the search fallback must reach the reader within 8 s
 const RATE_LIMIT = { windowMs: 60_000, max: 8 };
@@ -78,7 +78,9 @@ export async function POST(request) {
       body: JSON.stringify({
         model: MODEL,
         temperature: 0.2,
-        max_tokens: 420,
+        // gpt-oss is a reasoning model: keep the reasoning short so the answer fits and stays fast.
+        reasoning_effort: "low",
+        max_tokens: 1200,
         messages: [
           { role: "system", content: SYSTEM },
           { role: "user", content: `EVIDENCE:\n${evidence}\n\nQUESTION: ${question}` },
