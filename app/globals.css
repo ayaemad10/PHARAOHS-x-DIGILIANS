@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Cinzel is linked from Google Fonts in app/layout.js (not next/font), so name it here. */
+:root { --font-cinzel: "Cinzel"; }
+
 /*
  * PHARAOHS x DIGILIANS design tokens.
  *

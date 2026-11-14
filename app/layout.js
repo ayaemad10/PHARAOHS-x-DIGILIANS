@@ -1,4 +1,4 @@
-import { Cinzel, JetBrains_Mono, Noto_Serif_KR } from "next/font/google";
+import { JetBrains_Mono, Noto_Serif_KR } from "next/font/google";
 import { APP_NAME, APP_TAGLINE, BRAND, CHALLENGE_NAME, TEAM_NAME } from "@/lib/constants";
 import { AppProviders } from "@/lib/context/AppProviders";
 import "./globals.css";
@@ -21,13 +21,12 @@ const mono = JetBrains_Mono({
  * Display face. Carries the wordmark, page titles and the large-format instrument numerals,
  * and nothing else — body copy stays in Inter so the technical register is not diluted.
  */
-/** Engraved capitals for page titles and the team cartouche: the Pharaonic voice of the UI. */
-const royal = Cinzel({
-  variable: "--font-cinzel",
-  subsets: ["latin"],
-  weight: ["600", "700"],
-  display: "swap",
-});
+/**
+ * Engraved capitals for page titles and the team cartouche: the Pharaonic voice of the UI.
+ * Cinzel is linked from Google Fonts in <head> below rather than through next/font/google:
+ * Google now serves Cinzel's files from extension-less URLs, which crashes the next/font
+ * loader in this Next.js version at build time. `--font-cinzel` is defined in globals.css.
+ */
 
 const display = Noto_Serif_KR({
   variable: "--font-space-grotesk",
@@ -54,9 +53,15 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${mono.variable} ${display.variable} ${royal.variable} h-full antialiased`}
+      className={`${inter.variable} ${mono.variable} ${display.variable} h-full antialiased`}
     >
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap"
+        />
         {/* Applies the stored theme before first paint, so light mode never flashes dark. */}
         <script
           dangerouslySetInnerHTML={{
