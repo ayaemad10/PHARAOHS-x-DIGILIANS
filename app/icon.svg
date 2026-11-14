@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Pharaohs x Digilians">
+  <title>Pharaohs x Digilians</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1730"/>
+      <stop offset="1" stop-color="#050B18"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8C766"/>
+      <stop offset="1" stop-color="#B8891C"/>
+    </linearGradient>
+    <linearGradient id="orbit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00E5FF"/>
+      <stop offset="1" stop-color="#7B5CFF"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Badge -->
+  <rect width="64" height="64" rx="13" fill="url(#bg)"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="12.25" fill="none" stroke="url(#orbit)" stroke-opacity="0.55" stroke-width="1.5"/>
+
+  <!-- Orbit: the mission layer, behind everything -->
+  <ellipse cx="32" cy="34" rx="27" ry="7.5" fill="none" stroke="url(#orbit)" stroke-width="1.3" stroke-opacity="0.8" transform="rotate(-12 32 34)"/>
+
+  <!-- Pyramid frame -->
+  <path d="M32 5 L55 50 L9 50 Z" fill="#0B1730" stroke="#C9A227" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M32 5 L32 50" stroke="#C9A227" stroke-width="0.6" stroke-opacity="0.35"/>
+
+  <!-- Nemes headdress with flared lappets -->
+  <path d="M21 27 C21 17 26 12 32 12 C38 12 43 17 43 27 L48 49 L41 49 L39 38 L25 38 L23 49 L16 49 Z" fill="url(#gold)"/>
+  <path d="M26 17 L26 36 M32 13 L32 36 M38 17 L38 36" stroke="#0B1730" stroke-width="0.8" stroke-opacity="0.35" fill="none"/>
+
+  <!-- Face -->
+  <ellipse cx="32" cy="29" rx="5.8" ry="6.8" fill="#F0D27A"/>
+
+  <!-- Digital visor -->
+  <rect x="25" y="27" width="14" height="4" rx="2" fill="#00E5FF" filter="url(#glow)"/>
+
+  <!-- Uraeus -->
+  <path d="M32 19.5 L33.2 22 L30.8 22 Z" fill="#00E5FF" filter="url(#glow)"/>
+
+  <!-- Beard -->
+  <path d="M30.4 35.5 L33.6 35.5 L33.2 43 L30.8 43 Z" fill="#B8891C"/>
+</svg>
