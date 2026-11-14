@@ -89,7 +89,12 @@ export async function POST(request) {
     if (res.status === 429) {
       return searchAnswer(top, "The AI model is busy right now (rate limit reached), so here are the matching records instead. Try again in a minute for an AI answer.");
     }
-    if (!res.ok) return searchAnswer(top, "The AI model did not answer, so here are the matching records instead.");
+    if (!res.ok) {
+      // Logged server-side only (Vercel runtime logs), so a bad key or retired model is easy to spot.
+      const detail = await res.text().catch(() => "");
+      console.error(`[firewise] Groq returned ${res.status}: ${detail.slice(0, 300)}`);
+      return searchAnswer(top, "The AI model did not answer, so here are the matching records instead.");
+    }
     const data = await res.json();
     const text = data?.choices?.[0]?.message?.content?.trim();
     if (!text) return searchAnswer(top, "The AI model returned an empty answer, so here are the matching records instead.");
