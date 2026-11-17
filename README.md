@@ -3,6 +3,8 @@
 PHARAOHS x DIGILIANS · NASA Space Apps Challenge 2026
 
 Start with **[READ-ME-FIRST.md](READ-ME-FIRST.md)**: how to run the project, the pages, the data and troubleshooting.
+
+
 👥 Project Team
 
 This project is a collaborative effort developed by a dedicated team working together on research, development, implementation, and innovation.
