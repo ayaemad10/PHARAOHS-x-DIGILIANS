@@ -7,19 +7,19 @@ Start with **[READ-ME-FIRST.md](READ-ME-FIRST.md)**: how to run the project, the
 
 👥 Project Team
 
-This project is a collaborative effort developed by a dedicated team working together on research, development, implementation, and innovation.
+This project is a collaborative effort developed by a team of five members.
 
-Team Members
+#| Team Member| Role| GitHub
+1| Aya Emad| Project Owner"@ayaemad10" (https://github.com/ayaemad10)
+2| Abdelrahman| Team Member| "GitHub Profile" (https://github.com/abdelrahman1999osman-Da)
+3| Marwa| Team Member| "GitHub Profile" (https://github.com/marwaalaa254-wq)
+4| Abdelrhman Khaled| Team Leader Member| "GitHub Profile" (https://github.com/Abdelrhman-Khaled-Abdulmoneam)
+5| Aisha Alsadani| Team Member| "GitHub Profile" (https://github.com/aishaalsadani)
 
-Name| GitHub
-Aya Emad – Project Owner & Team Lead| "@ayaemad10" (https://github.com/ayaemad10)
-Abdelrhman Khaled – Team Team Member| "@Abdelrhman-Khaled-Abdulmoneam" (https://github.com/Abdelrhman-Khaled-Abdulmoneam)
-Aisha Alsadani – Team Member| "@aishaalsadani" (https://github.com/aishaalsadani)
+🤝 Team Collaboration
 
-🤝 Collaboration
+We are a team of five working together on research, development, implementation, and innovation.
 
-We believe in teamwork, shared knowledge, and collaborative innovation.
+Each member contributes to the project through collaborative work, knowledge sharing, and technical development.
 
-All team members contribute to the project's development through GitHub collaboration, code contributions, and shared technical efforts.
-
-Developed with collaboration, passion, and innovation. 🚀
+Built together with passion, teamwork, and innovation. 🚀
